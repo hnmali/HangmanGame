@@ -1,11 +1,12 @@
 import random
 
+print("Welcome to Hangman Game! Let's play with Bollywood movies.")
 chance = int(input("Enter number of rounds you want to play: "))
 
 while (chance):
     # List of Bolldwood movies
-    movies = ['Dilwale Dulhania Le Jayenge', 'Dhoom', 
-            'Kabhi Khushi Kabhie Gham','Lagaan']
+    movies = ['Dilwale Dulhania Le Jayenge', 'Dhoom 3', 
+            'Kabhi Khushi Kabhie Gham 1','Lagaan 3']
 
     # Choose a random movie from the list
     movie_to_guess = random.choice(movies)
@@ -15,8 +16,7 @@ while (chance):
     guessed_letters = []
     remaining_lives = 6
 
-    print("Welcome to Hangman Game! Let's play with Bollywood movies.")
-    print(f"The movie title has {word_length} letters or numbers and it doesn't contain any spaces name is written using camel casing.")
+    print(f"The movie title has {word_length} letters or numbers (without space).")
 
     while True:
         print(f"\nLives remaining: {remaining_lives}")
