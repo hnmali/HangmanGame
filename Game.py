@@ -17,8 +17,8 @@ while (chance):
     guessed_letters = []
     remaining_lives = 6
 
-print("Welcome to Hangman Game! Let's play with Bollywood movies.")
-print(f"The movie title has {word_length} letters.")
+    print("Welcome to Hangman Game! Let's play with Bollywood movies.")
+    print(f"The movie title has {word_length} letters.")
 
     while True:
         print(f"\nLives remaining: {remaining_lives}")
