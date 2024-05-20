@@ -24,13 +24,13 @@ while (chance):
         print(f"\nLives remaining: {remaining_lives}")
         print(' '.join(display))
 
-    if '_' not in display:
-        print(f"Congratulations! You guessed the movie '{movie_to_guess}'.")
-        break
+        if '_' not in display:
+            print(f"Congratulations! You guessed the movie '{movie_to_guess}'.")
+            break
 
-    if remaining_lives == 0:
-        print(f"Game Over! The movie was '{movie_to_guess}'.")
-        break
+        if remaining_lives == 0:
+            print(f"Game Over! The movie was '{movie_to_guess}'.")
+            break
 
         guess = input("Guess a letter: ").upper()
 
@@ -44,10 +44,10 @@ while (chance):
 
         guessed_letters.append(guess)
 
-    if guess in movie_to_guess.upper():
-        indices = [i for i, letter in enumerate(movie_to_guess.upper()) if letter == guess]
-        for index in indices:
-            display[index] = movie_to_guess[index]
-    else:
-        remaining_lives -= 1
-        print(f"'{guess}' is not in the movie title.")
+        if guess in movie_to_guess.upper():
+            indices = [i for i, letter in enumerate(movie_to_guess.upper()) if letter == guess]
+            for index in indices:
+                display[index] = movie_to_guess[index]
+        else:
+            remaining_lives -= 1
+            print(f"'{guess}' is not in the movie title.")
