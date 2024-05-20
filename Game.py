@@ -5,7 +5,6 @@ chance = int(input("Enter number of rounds you want to play: "))
 # List of Bolldwood movies
 movies = ['Dilwale Dulhania Le Jayenge', 'Dhoom 3', 
         'Kabhi Khushi Kabhi Gham 1','Lagaan 3']
-chance = int(input("Enter number of rounds you want to play: "))
 
 while (chance):
     # Choose a random movie from the list
@@ -26,10 +25,14 @@ while (chance):
 
         if '_' not in display:
             print(f"Congratulations! You guessed the movie '{movie_to_guess}'.")
+            print(f"You have scored {remaining_lives*10} points.")
+            chance -= 1
             break
 
         if remaining_lives == 0:
             print(f"Game Over! The movie was '{movie_to_guess}'.")
+            print(f"You have scored 0 points.")
+            chance -= 1
             break
 
         guess = input("Guess a letter: ").upper()
